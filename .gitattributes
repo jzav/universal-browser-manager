@@ -1,0 +1,15 @@
+* text=auto eol=lf
+
+*.css      text eol=lf
+*.html     text eol=lf
+*.js       text eol=lf
+*.json     text eol=lf
+*.manifest text eol=lf
+*.mf       text eol=lf
+*.sf       text eol=lf
+*.svg      text eol=lf
+
+*.png      binary
+*.rsa      binary
+*.sig      binary
+*.woff2    binary

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Search Help</title>
+    <style>
+        body {
+            font-size: 18px !important;
+        }
+    </style>
+</head>
+<body>
+<h1>Search</h1>
+<p>Currently available search modes are: Tabs (keyword <code>t</code>), Closed Tabs (<code>tc</code>), Bookmarks (<code>b</code>), History (<code>h</code>) and Clipboard (<code>c</code>).</p>
+<p>You can select search mode from <a href="https://i.imgur.com/yitG4gU.png" target="_blank" rel="noopener noreferrer">Search Mode Selector</a>. Or press either Ctrl + Alt + Up or Alt + Home to clear search box and type keyword. Then press Enter or click <a href="https://i.imgur.com/fGiY8N9.png" target="_blank" rel="noopener noreferrer">Execute Query Button</a>.</p>
+<p>Tabs mode currently lists results using columns: Name, URL, Index, Accessed and Folder. Column Folder shows all the folders respective page is bookmarked in.</p>
+<p>Closed Tabs mode lists results using columns: Name, URL and Closed.</p>
+<p>Bookmarks mode lists results using columns: Name (editable), URL (editable), Folder, Index and Added.</p>
+<p>History mode lists results using columns: Name, URL, Visits and Opened.</p>
+<p>Clipboard mode lists results using column URL. Clipboard must contain only URLs (no mixed content) and all URLs must start with http or https.</p>
+<p>Hover over Folder column cell to see full path of bookmark (in tooltip). Hover over other cells to see whole cell text (in tooltip). Hover over (most of) other UI elements to see command name or additonal info.</p>
+<h2>Column or cell based shortcuts and functionality</h2>
+<p>Focus any cell and start typing to activate find as you type feature. First cell in the same column whose value STARTS with typed characters will be focused. Turn on Caps Lock before you start typing to focus first cell whose value CONTAINS typed characters.</p>
+<p>Focus any editable column cell and press F4 or Alt + E to edit its value. Then press Enter to commit changes or Esc to discard them. All these commands are also available via context menu.</p>
+<p>Cell can be focused by clicking it our using keys/shortcuts: Alt + Left/Right, Left, Right, Up, Down, Tab and Shift + Tab.</p>
+<h2>Basic searching - by name or URL</h2>
+<p><code>t firefox</code> shows tabs whose name or URL contains "firefox".</p>
+<p><code>c firefox</code> shows clipboard items whose URL contains "firefox".</p>
+<p><code>h "universal browser manager"</code> shows history items whose name or URL contains multiple-word phrase "universal browser manager".</p>
+<h2>Advanced searching</h2>
+<p>You can use column names as field qualifiers to filter items.</p>
+<p>Press Alt + Up to focus search box and type field qualifier (e.g. <code>url:</code>). Pressing Ctrl + Up or clicking <a href="https://i.imgur.com/Sa53MjJ.png" target="_blank" rel="noopener noreferrer">respective button</a> removes all filters and focus search box.</p>
+<p><code>b url:firefox</code>, for example, shows bookmarks whose URL contains "firefox".</p>
+<p><code>tc name:"universal browser manager"</code> shows closed tabs whose name contains multiple-word phrase "universal browser manager".</p>
+<p>You can abbreviate all field qualifiers. So feel free to type <code>u:</code> or <code>ur:</code> instead of <code>url:</code>.</p>
+<p>You can use multiple field qualifiers to filter results even more. Just separate them by space.</p>
+<p>Search box is case-insensitive except for folder id parameter (e.g. <code>"test"#LaNdBdPOc8xT</code>).</p>
+<p>All irrelevant spaces are ignored. 1+ spaces are considered 1 space.</p>
+<p>Press Tab to normalize query:</p>
+<ul>
+<li>query is validated (basic validations only, complete set of validations will be performed when query is executed)</li>
+<li>all irrelevant spaces are removed</li>
+<li>abbreviated field qualifiers and parameters first, last, minute(s), hour(s), day(s), today, yesterday, week(s), month and quarter are completed (e.g. <code>ad:yes</code> is replaced by <code>added:yesterday</code>)</li>
+</ul>
+<h1>Groups</h1>
+<h2>AND groups</h2>
+<p><code>h (universal browser manager)</code> or just <code>h universal browser manager</code> shows history items whose name or URL contains "universal" AND "browser" AND "manager".</p>
+<p><code>h name:(universal browser manager)</code> shows history items whose name contains "universal" AND "browser" AND "manager".</p>
+<h2>OR groups</h2>
+<p><code>b {firefox add-on "universal browser manager"}</code> shows bookmarks whose name or URL contains "firefox" OR "add-on" OR multiple-word phrase "universal browser manager".</p>
+<p><code>b url:{firefox add-on "universal browser manager"}</code> shows bookmarks whose URL contains "firefox" OR "add-on" OR multiple-word phrase "universal browser manager".</p>
+<h1>Start and end anchors</h1>
+<p><code>t ["universal browser manager"</code> shows tabs whose name or URL STARTS with multiple-word phrase "universal browser manager".</p>
+<p><code>tc name:" fox"]</code> shows closed tabs whose name ENDS with " fox". So closed tabs whose name ends with "firefox" won’t be showed due to missing space before "fox".</p>
+<p><code>b folder:[test]</code> shows bookmarks whose parent folder name IS "test".</p>
+<h1>Folder qualifier</h1>
+<p><code>b folder:firefox</code> shows bookmarks whose parent folder name contains firefox.</p>
+<p><code>b folder:"test"#LaNdBdPOc8xT</code> shows bookmarks whose parent folder id is LaNdBdPOc8xT. Using folder id is necessary if two or more folders of the same name are created. You may want to select folder from <a href="https://i.imgur.com/O4zpPf9.png" target="_blank" rel="noopener noreferrer">Bookmark Folders drop-down list</a> in this case.</p>
+<p><code>b folder:{["universal browser manager" "test"#LaNdBdPOc8xT "Firefox"#61TNj_DI0OVW}</code> shows bookmarks whose parent folder name starts with multiple-word phrase "universal browser manager" OR whose parent folder id is LaNdBdPOc8xT OR 61TNj_DI0OVW.</p>
+<p><code>t folder:"test"#LaNdBdPOc8xT</code> shows tabs which are bookmarked in folder with id LaNdBdPOc8xT.</p>
+<p><code>t folder:[]</code> shows tabs which are NOT bookmarked in any folder.</p>
+<h1>Excluding results</h1>
+<p>Prefix word, multiple-word phrase, starting anchor, AND or OR group or field qualifiers name, url and folder with <code>-</code> (hyphen) to remove items from your results.</p>
+<p><code>t -firefox</code> shows tabs whose name or URL does NOT contain "firefox".</p>
+<p><code>h -"universal browser manager"</code> shows history items whose name or URL does NOT contain multiple-word phrase "universal browser manager".</p>
+<p><code>t -["universal browser manager"</code> shows tabs whose name or URL does NOT START with multiple-word phrase "universal browser manager".</p>
+<p><code>tc -{universal browser manager}</code> shows closed tabs whose name or URL does NOT contain "universal" OR "browser" OR "manager".</p>
+<p><code>b -url:firefox</code> shows bookmarks whose URL does NOT contain "firefox".</p>
+<p><code>h -name:(universal browser manager)</code> shows history items whose name does NOT contain "universal" AND "browser" AND "manager" at same time.</p>
+<p><code>t -folder:test</code> shows tabs which are NOT bookmarked in folders whose name contains "test".</p>
+<h1>Searching for dates</h1>
+<p>You can filter dates (added, closed and opened field qualifiers) using:</p>
+<ul>
+<li>first/last N item(s) parameter</li>
+<li>N minute(s), hour(s), day(s) or week(s) parameter</li>
+<li>today, yesterday, week, month or quarter parameter</li>
+<li>single date parameter (can be prefixed by <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> or <code>&lt;=</code>)</li>
+<li>range (between) parameter</li>
+</ul>
+<p><code>b added:last10</code> shows 10 last added bookmarks.</p>
+<p><code>t accessed:last10</code> shows 10 last accessed (i.e. activated or focused) tabs.</p>
+<p><code>h opened:last1</code> shows last opened website.</p>
+<p><code>tc closed:last400</code> shows 400 last closed tabs.</p>
+<p><code>t accessed:45minutes</code> shows tabs accessed in last 45 minutes.</p>
+<p><code>tc closed:20minutes</code> shows tabs closed in last 20 minutes.</p>
+<p><code>h opened:1hour</code> shows websites opened in last 1 hour.</p>
+<p><code>b added:1day</code> shows bookmarks added in last 1 day.</p>
+<p><code>h opened:2weeks</code> shows websites opened in last 2 weeks.</p>
+<p><code>t accessed:today</code> shows tabs accessed today (from 0:00:00 to 23:59:59).</p>
+<p><code>h opened:today</code> shows websites opened today (from 0:00:00 to 23:59:59).</p>
+<p><code>tc closed:yesterday</code> shows tabs closed yesterday (from 0:00:00 to 23:59:59).</p>
+<p><code>b added:week</code> shows bookmarks added this calendar week.</p>
+<p><code>h opened:month</code> shows websites opened this calendar month.</p>
+<p><code>h opened:quarter</code> shows websites opened this calendar quarter.</p>
+<p><code>b added:2017-1-1</code> shows bookmarks added on January 1, 2017.</p>
+<p><code>h opened:&gt;=2017-1-1</code> shows websites opened on or after January 1, 2017.</p>
+<p><code>h opened:&gt;2017-1-1</code> shows websites opened after January 1, 2017.</p>
+<p><code>h opened:&lt;=2017-1-1</code> shows websites opened on or before January 1, 2017.</p>
+<p><code>h opened:&lt;2017-1-1</code> shows websites opened before January 1, 2017.</p>
+<p><code>b added:2017-1-1..2017-12-31</code> shows bookmarks added in 2017.</p>
+<h1>Searching for number values</h1>
+<p>You can filter number values (index and visits field qualifiers) using:</p>
+<ul>
+<li>first/last N item(s) parameter</li>
+<li>single number value parameter (can be prefixed by <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> or <code>&lt;=</code>)</li>
+<li>range (between) parameter</li>
+</ul>
+<p><code>t index:last20</code> shows last 20 tabs in tabstrip.</p>
+<p><code>h visits:first10</code> shows 10 most visited websites.</p>
+<p><code>b folder:test index:first5</code> shows first 5 bookmarks in folder whose name contains "test".</p>
+<p><code>t index:5</code> shows fifth tab in tabstrip.</p>
+<p><code>t index:&gt;=5</code> shows all tabs in tabstrip except for first 4.</p>
+<p><code>t index:&gt;5</code> shows all tabs in tabstrip except for first 5.</p>
+<p><code>h visits:&lt;=5</code> shows websites opened up to 5 times.</p>
+<p><code>h visits:&lt;5</code> shows websites opened up to 4 times.</p>
+<p><code>b folder:test index:2..15</code> shows bookmarks with index between 2 and 15 in folder whose name contains "test".</p>
+<h1>Notes</h1>
+<p>When surrounded by quotation marks, parentheses, braces and brackets have literal meaning: <code>b name:"(universal) {browser} [manager]"</code>.</p>
+<p>When surrounded by quotation marks, starting hyphens and/or field qualifiers have literal meaning: <code>b "-name:test"</code>.</p>
+<p>Brackets (start and end anchors) won’t work inside AND groups like <code>b url:([universal browser manager)</code>. Use them like this: <code>b url:[universal url:(browser manager)</code>.</p>
+<p>End slashes can be omitted when using end anchors: filter <code>url:example.com]</code> will show both http://www.example.com and http://www.example.com/.</p>
+</body>
+</html>

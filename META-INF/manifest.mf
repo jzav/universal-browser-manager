@@ -1,0 +1,482 @@
+Manifest-Version: 1.0
+
+Name: background.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 8yDtYQj5c9oojh9eWeo0ZVEgcKM=
+SHA256-Digest: kGvuawyP4VtCDwnmIPLXwbAHBB5n9hCXJL9gNG4Ys5U=
+
+Name: manifest.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: KR+woL5eZSq5cURExGgbUnPJ08M=
+SHA256-Digest: hU6CZVSBGTCdMIDys4IcghGkOdpchofvoWPJZzcOaO4=
+
+Name: ayc/ayc.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: cPKHINqZli5HjdBY5tqL21FmxZY=
+SHA256-Digest: nwCOmvYy1yBBF0ijCOHoeDrOi0ztnaGMfWejiQe6xM8=
+
+Name: ayc/ayc.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: VVwe+i1zVDJRR9uel0LBvxzfASQ=
+SHA256-Digest: ++IY+e7ki5RbN0WbaGQH/Okmo8qKt6q7HPXjMyikd8A=
+
+Name: ayc/ayc.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: vpIvkw1yL47oD0ol0CHGzqME6t4=
+SHA256-Digest: 0DvYo8EJHgra+MuFaamzaJlajOEEAS30edLyfy7GTrk=
+
+Name: ayc/bookmarkManager/bookmarkHelpers.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: hyBzqZnx3+UhXamoikKS9rpCM7M=
+SHA256-Digest: Mig0O9pmmvYL/ZCkiZdB/HtppwxSYKlQxqoVX0tVE2A=
+
+Name: ayc/bookmarkManager/bookmarkTreeClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Px9aaSSjWSwx9zDzQsv/oyIBvbI=
+SHA256-Digest: PV85t6qoDTc0VPAXyHSSNjE1mLcPxmYGdABGKGzHiQY=
+
+Name: ayc/commands/commandBoxHelpers.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: hOyNOa7kVlO3i0+t2qN78SbEg5A=
+SHA256-Digest: K2QIJ3puCDHBCZ9qzxDarJtfhyhf0gOtXWASgEYjkkw=
+
+Name: ayc/commands/commandDefClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: rdR66vQ/MiCGY63nwk8EXUxKmMA=
+SHA256-Digest: 63h1zSn1/piN1mj7TjW9gddxC2zU39R6aVYib7IZQnY=
+
+Name: ayc/commands/commandsClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: v+9PUU/2IIvMXnHGHlJGDxk0pkk=
+SHA256-Digest: bk/1fjb9KZRTG+As346tUhfwlKrLS2xTRu3G3/srdlQ=
+
+Name: ayc/commands/commandsIconsClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 9EIxgMieYvGksq2CwIAQ2/K9DQg=
+SHA256-Digest: n4jeCXIv++TDpE/vfJ3ej8dXXBfA5tMdwk/doVAsvys=
+
+Name: ayc/commands/bookmarks/goToParentFolders.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: a/9Y2JnNjEtVjB0xKpemwdKvmKw=
+SHA256-Digest: 622WQfoD29qEwBEpdNysq26/gAAl0o0UQHLeKi/ntCs=
+
+Name: ayc/commands/bookmarks/moveWithinFolder.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Fwo0cw7EgxjqZbVmTgEn6ce230E=
+SHA256-Digest: FfHe9+nCamnxo05r7jauEZ7sUryt9BJc9mITcdBJWsY=
+
+Name: ayc/commands/bookmarks/reCreFolClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: AdFtvdAzXqksJWCMAIwWxs4DCHo=
+SHA256-Digest: ATe/GpGDDwS9/pDFXP0uiUlqBj/ASujRWoJVWWPIQr8=
+
+Name: ayc/commands/general/bookMoveClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: gY8WbfCjx42cgcQ34Ai9Os9Ce6M=
+SHA256-Digest: HPf1oF++mpzL6XvQHGAGrfpPfhIbCLtBxy40poWzcQs=
+
+Name: ayc/commands/general/copyClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 4zp28qIM4WI0JV4HNGOhXrO/Bss=
+SHA256-Digest: 4Pl6zYPtfsMH8xvvRPI0i+SLkmKz5XXQFftd5WyEYZQ=
+
+Name: ayc/commands/general/deleteClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: HYuy/R85qV8bQWUySJJyMsjIdfY=
+SHA256-Digest: pE71CosPTGQ4jpnYDSQVTicOtQF1/1iXQwU3ClTCbEE=
+
+Name: ayc/commands/general/editCellValue.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: qKjEznzJcz8VIZ2TTpmLyTcUxRc=
+SHA256-Digest: MB9LStSBy/7gq2L7n/J/a5hFef8q0JfSTkj88TqIsZo=
+
+Name: ayc/commands/general/goToBookmarks.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: YwdRLf+jAfAISArXrQmTXHicUZo=
+SHA256-Digest: b8j9lW4yfJ3fGvzONJUP75d0/nsZkc0ybOHdJebKau0=
+
+Name: ayc/commands/general/locateFolderInTreeFunc.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: g2BRj31gy7xNWOB1qOMLRkcbQfA=
+SHA256-Digest: Pm7RdNn24fjAyCrgDFKrclSD+Dr3xE2xFkMpD8aOKUU=
+
+Name: ayc/commands/general/open.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: S+l554DM7hkIs2kG36L94B7QBzc=
+SHA256-Digest: phx18B5tyNa3mft/X/m0FruB5zE+tAjRyZHIYO1HpH4=
+
+Name: ayc/commands/general/save.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: m38X1Oy6Z9f7XJp9hY97h5D40mM=
+SHA256-Digest: e/wo4y1uFUtJYKdBs/IPpwn5QLqB0G1ghtbS1unHSWg=
+
+Name: ayc/commands/general/update.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 0qpYUf8JDD/yp6BiV6lZ7HS/imQ=
+SHA256-Digest: KDZkleVbn+TnAv9OKEUHzagfVIKlG7DDmTEt4QdRftE=
+
+Name: ayc/commands/tabs/close.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: CR8cnnXpRheOs5X+JJIxkk7Zm58=
+SHA256-Digest: h6MrXdXDa6wWOv8ldnDcJOM4cliXN0BMqrqDOWpVMX0=
+
+Name: ayc/commands/tabs/move.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: SFJWjBPQVc33WajfDfdQRd9TBGk=
+SHA256-Digest: vanYX8O4bN4aMHFCYwDtQVjnSvm5ikDN1Tv06N/Er9E=
+
+Name: ayc/commands/tabs/reload.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: pF1lAvAcYSDr6u7oVSd5TuTNGxo=
+SHA256-Digest: YDVMWmcdpaPIX6frTb6ZWmsaCNrBuZhhb5pPy6GfB1Y=
+
+Name: ayc/commands/tabsClosed/restore.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: pA38Wu661Vk6LC0sT7LCaxg6CIU=
+SHA256-Digest: 9rL2MsR4CF4w4w+lkTgBYrEYp11NSsuJxhzfT0oo7r0=
+
+Name: ayc/grids/gridDefClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: rVE19B/mjcmJGBOLJ96H+Jnm0WA=
+SHA256-Digest: z+kAoDpJzPm3T3IwVwCtiI4IeyiMFTvgkFwa2JJVGxg=
+
+Name: ayc/grids/gridsCellRenderers.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: EBi+73lbdI1GcIxbrZKEdsmd2EQ=
+SHA256-Digest: fXjlbs1zRhX5N8AzNlxsKCNHU9yeThFRRAztqKZ0+hI=
+
+Name: ayc/grids/gridsClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: GNq/3zhhbyRAlz9kr+WZe9oGGew=
+SHA256-Digest: 04LqYQDJ+cmkiSkmzJss2AZTBbPy2chE/F4R4itzxdQ=
+
+Name: ayc/grids/gridsEvents.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 6qt4aQdavddFblu5hoj00fE7vCI=
+SHA256-Digest: 8aeFveJGy+aQAf3xCnddcE8rHOmRhI4kTD5Bu2eCB4Y=
+
+Name: ayc/grids/gridsOptions.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: F/q8t2bkdxTtp2JcDFJE0jmQW9A=
+SHA256-Digest: 0TSNAYnMYTLN9uXKD5G8aH/i/Ykvb/aTbtNMek0zS0U=
+
+Name: ayc/libraries/external/async.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: dLz5hksDnYa6W+Q6blNlCBKYIto=
+SHA256-Digest: ixfdv6k+dGan9mMKiQkjPpCzDHiHpHDGpsgd5m7Ejl0=
+
+Name: ayc/libraries/external/lodash.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: A9YNFRDSSpUv83C3cDWwMah8QVg=
+SHA256-Digest: TARWG+/fZTrvAXpCrFrd9o6pQ838pr3uXOBOBOgTn1Q=
+
+Name: ayc/libraries/external/moment.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: caD24Do0ZW1aip92TlyLcMxZNK4=
+SHA256-Digest: GSRe5cHmmTD3DgBxRifzkNLaW1iwPTzt9kJ86rGa8tg=
+
+Name: ayc/libraries/external/ag-grid/ag-grid-community.noStyle.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Yh2d0FSz5CXllMcgUFMmqdUPGN4=
+SHA256-Digest: /Td9qEQvBASDqFZRD0PB/KkQhSYuX1HrDVCnQcMMIvA=
+
+Name: ayc/libraries/external/ag-grid/ag-grid.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: bpdKRAAeui0BDwbF8iBwlDrqzRg=
+SHA256-Digest: A4ZqLhI88lQV89JahPb78//yXrRh4zZM+7AJXTSzO24=
+
+Name: ayc/libraries/external/ag-grid/ag-theme-fresh.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 50XR12PqyBoDaaHJjWvcx82wAm4=
+SHA256-Digest: VPuYPIZSXKbZk0Q6Md18atNbPgGjbACJZKuKJJpySjE=
+
+Name: ayc/libraries/external/bootstrap/bootstrap.bundle.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: nmc/jO2TfV7vIRDxHj8GFFPQ6f0=
+SHA256-Digest: htsAUOIgN8xkootpQUzmvaCbQo6x2PNMTD7kLWI6yYQ=
+
+Name: ayc/libraries/external/bootstrap/bootstrap.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: GkFLqj46nY/67JtEDGkx1aWiDy4=
+SHA256-Digest: o+AsfCHj7A1M5Xgm1kJmZiGEIvMQEzQqrXz2072Gkkg=
+
+Name: ayc/libraries/internal/msgs.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: IoLXwfjj7FqdUPOF1KSAZP58vG4=
+SHA256-Digest: U0jJHjSVeoWGZRed/ULdkFGKo/Da/qUBUlltQ6Zkxp4=
+
+Name: ayc/libraries/internal/utilsClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: JXnZbHAqJE6/bw4xRuolPNRtX0Y=
+SHA256-Digest: o4TXS7HiBiWUUAzSkdKo9BWawpg8nvKDqXmL0T1hHCM=
+
+Name: ayc/modals/alert.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: E3sSLeE7xkJt0hz6jAQy2dCMj6g=
+SHA256-Digest: ds2qgWnSTRTSktmiiwZNsI4OkOmvk+YLNjFFm6mBc9M=
+
+Name: ayc/modals/prompt.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: yyua8vgrA+j3jh2jVuKU6tkojTc=
+SHA256-Digest: ykx+bRHrTu+DtDdb6S5etskFyY4yXn0YOc068VORT9U=
+
+Name: ayc/popovers/closeTabs.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: zIK7SPrZdRY2qPyahzwkdKQqP6I=
+SHA256-Digest: Lt9pwNwtA4jvfVx+2eMawYXuwcliREKhYJkh/VNgmHs=
+
+Name: ayc/popovers/searchMode.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: /R/fNn10+0257vnDm12UXF/rCn8=
+SHA256-Digest: MFXvF8elVfaqhyFiS7j2TQ8LjnsAW3Vq/CExwm1Xqu8=
+
+Name: ayc/popovers/selection.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: V8+qSiwG2mhcbcsf4+0xmOIvbhc=
+SHA256-Digest: iwilV4N7UjgoZiaiW0Qas/9T2wAMRYGIVPtZiO8i7e8=
+
+Name: ayc/searching/queryAndCommandManagers.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 7w2jgr6Sg8Yo2L/O4STQ9XGMiLg=
+SHA256-Digest: F39OX09qP3C4aeCsPWi4cFTHcieiw2MEluZUedGwfc8=
+
+Name: ayc/searching/queryBuilder.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: /JGq5IhY5pJfmyn5Op6a3JgNiL4=
+SHA256-Digest: rIzgmXs4fdaLJ7GA8RZP8X1lAbtheTxl197qLF3VHPM=
+
+Name: ayc/searching/quickFilters.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: /Z3IsfVyY8aynL1n6WrmS33LydY=
+SHA256-Digest: B0pLTWeXbpSKxwPfILjXfEd5sMwXuNO+7+YAwtuey34=
+
+Name: ayc/searching/search.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: xuV5Y0P4K+CubqY8NslqExw3sgg=
+SHA256-Digest: M9bgUWVSozojfFNyRcvzFPzIc1C8EKwfkobaqSoSVHY=
+
+Name: ayc/searching/searchBoxHelpers.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: aswxOGYm69cfAGL435QSRG0julE=
+SHA256-Digest: /P1n/FmavehHrORfuEVHA8OTxmzhtnzf6xDKoEpEUU8=
+
+Name: ayc/shortcuts/gridCustomNavigation.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: baEhEz5l9/0TfS7KVSr0ppj781Q=
+SHA256-Digest: lQfYAMVoal3CBxdvoxp+oHec7AyA4AuUsFuGbVPAgCM=
+
+Name: ayc/shortcuts/onCellContainerKeydown.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: GtX4xfcI5IwUAJkhFJeKv60ZCn4=
+SHA256-Digest: w6TKNjlxql+FOruVbB9bT3jzq5+ZnWAo4E4nVGY+rHs=
+
+Name: ayc/shortcuts/onCellContainerKeyup.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: TPn+aZXQOUzxmN9riZe2tkplQ3Q=
+SHA256-Digest: CEB/J6AQ3ee8Ru7eW2MrKh5jR1pwiXWRPFTYTd6h1vQ=
+
+Name: ayc/shortcuts/onDocumentKeydown.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: ONA5XA05r8paj5CBSkpIOh29Z8o=
+SHA256-Digest: 0JFYpoKcE6dmjCXF51yFH2aD1UiF4B1e/bjjd8uM6ZE=
+
+Name: ayc/shortcuts/searchAsYouType.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: eLy3KXJln8t9Xc5/n84NgJcoRLs=
+SHA256-Digest: WpbnK6kC92IjD7chkV1Z3zOj1razbumbEn29T/CnJXw=
+
+Name: ayc/statusBar/statusTextClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: uO87oNoZEJBfneWi3Apl5lpzEwk=
+SHA256-Digest: HwJUuxrvMoTJNByO5sZegqNbT2XaVA8YIGcwz5bpcuM=
+
+Name: ayc/tabs/tabsClass.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: afwjZhXyUwFXQ9WUTp3zs+BuLVk=
+SHA256-Digest: UB24eOl0k6iZOGzkn+57Bl1QObTTwsbPY9YpHxc59/Q=
+
+Name: ayc/tabs/tabsEvents.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: GqNqGc8rwUN9rjaGSSHLHdCGaJg=
+SHA256-Digest: cxdO+Q2zp+I6C2WEQ5QBpOpeZQo0ro7bvIEtq0Ld2vs=
+
+Name: icons/Bookmark-icon-128.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: f35V4R4iejKTPijO35wB0MkZZp0=
+SHA256-Digest: lZTqMlAxQQnCGvgBTXkAUEi8NqdC+wxK9frJrvIlJSs=
+
+Name: icons/Bookmark-icon-16.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: EKjHABptwOUny659VNz3YIjWpmM=
+SHA256-Digest: huEy5tnbygjAHdHTuMq8UkhP/SojGJTMoPCYKNLlPBo=
+
+Name: icons/Bookmark-icon-24.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: gvmt6pqR1GhgV5GBgH2Huvw04Rw=
+SHA256-Digest: ornvQTDFSDqvQCNz/pwVDvyRbXYJJc42Bk+85grmTaw=
+
+Name: icons/Bookmark-icon-32.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: QV9AjNIjIVtdT0ihTT4PiJu4Hnc=
+SHA256-Digest: iU8KfNuzwWg750pPgPjO20tAATFKblDsqjzrG6o7Iiw=
+
+Name: icons/Bookmark-icon-48.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: AWy+KDbY9DTW5magkpcElVyzVgc=
+SHA256-Digest: UnSNx5Lrta7s8hD6DYs74BGaEcOoAwGxuTOQxxOu9Cw=
+
+Name: icons/Bookmark-icon-64.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: lag79ldIY0pNs6Qz+d+0Wc4cNvE=
+SHA256-Digest: uxByvawLUI+R8N2WD8HnkH9UfYQRmsTUkGbHKSSFjOE=
+
+Name: icons/Bookmark-icon-72.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: EMVoXKqY1KS18N3u1DSzRnlezXE=
+SHA256-Digest: fohuYJt8tKCH6DlyoMPcYuONgQFh7kOJZx/eGIYJY+I=
+
+Name: icons/Bookmark-icon-96.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: LX2YN6hcIWsQLmUQOtAoitbqGyM=
+SHA256-Digest: 1La3aSXtXq/fllbk1Zd8+oHrtuicS5nSj+T7nwp2Lck=
+
+Name: icons/contextmenu/check-solid.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: +WbPN/eg/JE8wpSe1+z+9S2+r5w=
+SHA256-Digest: x74iRGoolBQnWV/8e1Am5dIGUlBwnYUZMxzj9tKqA80=
+
+Name: icons/contextmenu/close_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: gjihvN9nBnA/y21O+vNsPxnEfQ8=
+SHA256-Digest: AuEGrh7E2uhI7VpfvJPLANP//PJX0Gsl0vSyAfPHV+Y=
+
+Name: icons/contextmenu/delete-filled-svgrepo-com.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: HIjuA69kRWI1BqGTyXwWOSFmvP8=
+SHA256-Digest: UoVb9kw+CoWPY5wEZT6PszupnWgoh6HY/Pr6MXJ+5aU=
+
+Name: icons/contextmenu/east_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 4ZgzAqNRL4/4o7pSeRKnfsEaf0k=
+SHA256-Digest: B+RG/70FtDj8tfCU+QC1VyLQPSKgV5wbMKEVvhJK/s0=
+
+Name: icons/contextmenu/edit-solid.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: ecgdBzChZtmYDzZ87gASEYLjf7I=
+SHA256-Digest: QqEEfuFflnv00dJeox/F6fQvKsiTgBL9D5KuYzueQUY=
+
+Name: icons/contextmenu/eraser-solid.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Q3Fjw2SgvNF2MOEFfqG4i7s85fA=
+SHA256-Digest: ocCFE9gnkN/jUGW3P0ULak+3UkO6TIFLcSq4tytJ8QM=
+
+Name: icons/contextmenu/folder.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: MH3jKOk2KskVbp9QY6LyI3DNDbo=
+SHA256-Digest: ToMmMZ0TTb8AtOcObk9xv2o8YIhdrY/1tAI9zaJKho8=
+
+Name: icons/contextmenu/Font_Awesome_5_regular_copy.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: zfrjbTOwv4bVRCjGmyTS7cHEvG4=
+SHA256-Digest: UV/pbDxEEkKcDJO9DxXsoIYvPtGdVRtyK4NH6VqVESk=
+
+Name: icons/contextmenu/keyboard_double_arrow_down_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: kE/fYhfdHoYDLpg2ZrEm5K2S0t0=
+SHA256-Digest: r7n2idnxGiPYIM1h9DuJRSAaaHHAalfWx40prfF52hU=
+
+Name: icons/contextmenu/keyboard_double_arrow_left_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: moUnNPBLOyF/girKnM1cGth3Fwc=
+SHA256-Digest: poa2Kw9ZE/WPvekHx5gzhSv+wVcLQ24rU7qUzjczio0=
+
+Name: icons/contextmenu/keyboard_double_arrow_right_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: bEJ5faxo1dd03h3MD2qe+4SWFnQ=
+SHA256-Digest: vnvqVH5XCI1Fm0u6yJ5rQ9gQNKnimrHv2REBr7Ctg0w=
+
+Name: icons/contextmenu/keyboard_double_arrow_up_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: IhfAnvkUsEN+zqQCVc6Qo8H028w=
+SHA256-Digest: 6vBSQ+Od92Ty4dNdLS70c6jp93P+Rhkj07xRTVT4G6c=
+
+Name: icons/contextmenu/link-solid.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: qk5GGXE6LOWjWfZU2opRjZI7cUc=
+SHA256-Digest: dJ6yw/okwEOd7CUyGy4bJTPix0rM3vfmQesUTrApH7A=
+
+Name: icons/contextmenu/menu.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 9mO5wzJtnEwLI9e0pWrPmcS16Bw=
+SHA256-Digest: XRTp3ft1hBoqN287GBEx3pcGHdl9XPp7MO0QbjHSFA0=
+
+Name: icons/contextmenu/navigate_before_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: YGEdO8PHhnY7nrUHYfIpKVF04QM=
+SHA256-Digest: nOMcgAD+rtSdaJZsm9SVykgQyYjOPn8ELO8cvuXvypQ=
+
+Name: icons/contextmenu/open_in_new_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 0waMN6XumMX5fOo9W9j6MiDnuTo=
+SHA256-Digest: NYJHvLLtIebUSOxXKqTw3MJseUclo3YW95pTbwXOCxQ=
+
+Name: icons/contextmenu/refresh_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: YLGbWZ3BjeHJHoQmZ5aRWAN9+Y0=
+SHA256-Digest: mNCxSk2JuH29dDRx3wynpBvgP4MEvdazK+BPByBDOmg=
+
+Name: icons/contextmenu/restore_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: akH2fIYQWdfQAEF3kS7RxmRt+do=
+SHA256-Digest: Ej42/U0oMD5ophoH8hk80VvnZ5FXpgANzgVWvzmyvAQ=
+
+Name: icons/contextmenu/save-solid.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: yR8bZJrILK51odQQPe2Ak44WE+g=
+SHA256-Digest: n65sWynwFtdjxtD3pvNvHbS7YGnxdwnFYTGg/upRPJs=
+
+Name: icons/contextmenu/star_border_black_24dp.svg
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: FjO/++FQu432bHsNFeGd8G8mqsw=
+SHA256-Digest: NHAooc18q1l9yvJ3OmtW33nnZ9RaTt5+SZ9WigMsXOQ=
+
+Name: icons/fontawesome/css/all.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: ikpV20bF2/75xnA/otBOicv89jM=
+SHA256-Digest: DLjMP+5CdeGCI2qxnDquVSdPQ6oP/enAUQ2NWfz45dw=
+
+Name: icons/fontawesome/webfonts/fa-brands-400.woff2
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: BhPH67pV7kfvMCwPd2YyRpL4mac=
+SHA256-Digest: jqh5F1SRWomKMQDmPjKXim0XY75t+Oc6OdOpDWkc3u8=
+
+Name: icons/fontawesome/webfonts/fa-regular-400.woff2
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: E1F1Ka/6OeJYXFkayubcM2tqqRc=
+SHA256-Digest: 5CqIRERIrD1gVJzHwf8sipyschA0wHPYChSkTnlzDMo=
+
+Name: icons/fontawesome/webfonts/fa-solid-900.woff2
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: DMssgUp+TKEsR3iCFjOAnLA2Hqo=
+SHA256-Digest: mDS4KtJuKjdYPSJnahLdLrD+fIA1aiEU0NsaqLOJlTc=
+
+Name: icons/materialicons/MaterialIcons.woff2
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: J2vb+jwC/omXek5HAPdeO6xUheQ=
+SHA256-Digest: Fqa2cx4vxjh1YdePWv/TtTmmwFQENJJLgJ1JCl68lyU=
+
+Name: icons/materialicons/MaterialIconsOutlined.woff2
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: s01NGZ4e5qJ+6+faIpMEuYM1seE=
+SHA256-Digest: bVSRW2fMZbowzO5e2q9ChqqYQSkOY3s1PDpohqFyMuM=
+
+Name: META-INF/cose.manifest
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: UjqdBXjV5qFo9bCJwTLrwudwb+c=
+SHA256-Digest: IRROBm9XWB5G71P8gbWrePQoC1Yq3F+h74V8pSM9MrQ=
+
+Name: META-INF/cose.sig
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: wohkO7op7ijJooUy00M0OwsXR4Y=
+SHA256-Digest: uq4DI8kCBFKQJiUKtW+iJZiWVLlZ6VchYsqAmppJtpQ=
+

@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+	<head>
+	    <meta charset="UTF-8">
+
+		<title>Universal Browser Manager</title>
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-24.png" sizes="24x24">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-48.png" sizes="48x48">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-64.png" sizes="64x64">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-72.png" sizes="72x72">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="../icons/Bookmark-icon-128.png" sizes="128x128">
+		
+	    <link rel="stylesheet" type="text/css" href="./libraries/external/ag-grid/ag-grid.css">
+		<link rel="stylesheet" type="text/css" href="./libraries/external/ag-grid/ag-theme-fresh.css">
+		<link rel="stylesheet" type="text/css" href="./libraries/external/bootstrap/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../icons/fontawesome/css/all.css">
+		<link rel="stylesheet" type="text/css" href="ayc.css">
+			
+		<!--REFACTOR USING EXPORT/IMPORT-->
+	    <script src="./libraries/external/ag-grid/ag-grid-community.noStyle.js"></script>
+		<!--CONTINUE TO REFACTOR COMMANDS USING ASYNC/AWAIT WHERE SUITABLE-->
+		<script src="./libraries/external/async.js"></script>
+		<script src="./libraries/external/bootstrap/bootstrap.bundle.js"></script>
+		<script src="./libraries/external/lodash.js"></script>
+		<script src="./libraries/external/moment.js"></script>
+		<script src="./libraries/internal/utilsClass.js"></script>
+		<script src="./libraries/internal/msgs.js"></script>
+		<script src="./libraries/internal/urls.js"></script>
+	    <script src="./statusBar/statusTextClass.js"></script>
+	    <script src="./bookmarkManager/bookmarkTreeClass.js"></script>
+	    <script src="./bookmarkManager/bookmarkHelpers.js"></script>
+	    <script src="./searching/searchBoxHelpers.js"></script>
+		<script src="./searching/search.js"></script>
+	    <script src="./searching/quickFilters.js"></script>
+	    <script src="./searching/queryAndCommandManagers.js"></script>
+	    <script src="./searching/queryBuilder.js"></script>
+	    <script src="./modals/alert.js"></script>
+	    <script src="./modals/prompt.js"></script>
+	    <script src="./popovers/searchMode.js"></script>
+	    <script src="./popovers/selection.js"></script>
+	    <script src="./popovers/closeTabs.js"></script>
+	    <script src="./tabs/tabsEvents.js"></script>
+	    <script src="./tabs/tabsClass.js"></script>
+	    <script src="./shortcuts/onDocumentKeydown.js"></script>
+	    <script src="./shortcuts/onCellContainerKeydown.js"></script>
+	    <script src="./shortcuts/onCellContainerKeyup.js"></script>
+	    <script src="./shortcuts/searchAsYouType.js"></script>
+	    <script src="./shortcuts/gridCustomNavigation.js"></script>
+	    <script src="./grids/gridsCellRenderers.js"></script>
+	    <script src="./grids/gridsEvents.js"></script>
+		<script src="./grids/gridBasicInfo.js"></script>
+	    <script src="./grids/gridsOptions.js"></script>
+	    <script src="./grids/gridDefClass.js"></script>
+	    <script src="./grids/gridsClass.js"></script>
+		<script src="./commands/commandBoxHelpers.js"></script>
+	    <script src="./commands/commandDefClass.js"></script>
+	    <script src="./commands/bookmarks/goToParentFolders.js"></script>
+	    <script src="./commands/bookmarks/moveWithinFolder.js"></script>
+	    <script src="./commands/bookmarks/reCreFolClass.js"></script>
+		<script src="./commands/general/bookMoveClass.js"></script>
+	    <script src="./commands/general/copyClass.js"></script>
+	    <script src="./commands/general/deleteClass.js"></script>
+	    <script src="./commands/general/editCellValue.js"></script>
+	    <script src="./commands/general/goToBookmarks.js"></script>
+	    <script src="./commands/general/locateFolderInTreeFunc.js"></script>
+	    <script src="./commands/general/open.js"></script>
+	    <script src="./commands/general/save.js"></script>
+	    <script src="./commands/general/update.js"></script>
+		<script src="./commands/tabs/close.js"></script>
+	    <script src="./commands/tabs/move.js"></script>
+	    <script src="./commands/tabs/reload.js"></script>
+	    <script src="./commands/tabsClosed/restore.js"></script>
+	    <script src="./commands/commandsClass.js"></script>
+		<script src="./commands/commandsIconsClass.js"></script>
+		<script src="ayc.js"></script>
+    </head>
+
+    <body class="bg-secondary bg-gradient bg-opacity-10">
+		<div id="main">
+			<div id="searchBoxHelpers" class="d-flex gap-3px h-38px lh-38px text-secondary overflow-hidden">
+				<span id="searchMode" role="button" class="material-icons lh-inherit fs-40px user-select-none c-394047 p-0px mt--1px">manage_search</span>
+					<div id="searchModeDIVCont" class="d-none">
+						<ul id="searchModeULCont" class="list-group list-group-flush fw-bold">
+							<a id="searchModeTabs" role="button" class="list-group-item list-group-item-action">Tabs</a>
+							<a id="searchModeClosedTabs" role="button" class="list-group-item list-group-item-action">Closed Tabs</a>
+							<a id="searchModeHistory" role="button" class="list-group-item list-group-item-action">History</a>
+							<a id="searchModeClipboard" role="button" class="list-group-item list-group-item-action">Clipboard</a>
+							<a id="searchModeBookmarks" role="button" class="list-group-item list-group-item-action">Bookmarks</a>
+							<a id="searchModeCancel" role="button" class="list-group-item list-group-item-action">Cancel</a>
+						</ul>
+					</div>
+				<span id="queryBuilderElement" title="Query Builder" role="button" class="material-icons-outlined lh-inherit fs-32px user-select-none c-394047 pr-2px">filter_alt</span>
+				<span id="clearFilters" title="Clear Filters (Ctrl+Up)" role="button" class="material-icons-outlined lh-inherit fs-32px user-select-none c-394047 pl-2px pr-2px">filter_alt_off</span>
+				<i id="clearSearchBox" title="Clear All (Ctrl+Alt+Up OR Alt+Home)" role="button" class="fas fa-eraser flex-grow-1 lh-inherit fs-26px user-select-none c-394047 pl-7px"></i>
+			</div>
+
+			<div id="searchCont" class="input-group">
+				<input type="text" id="search" class="form-control search-box-width ml--1px pl-10px pr-10px" data-query data-row data-selected role="presentation" autocomplete="off">
+				<i id="goUp" title="Execute Query (Enter)" role="button" class="fas fa-search input-group-text fs-23px c-394047 pt-7px"></i>
+				<i id="saved" title="Saved Queries (Alt+Q)" role="button" class="fas fa-save input-group-text fs-24px c-394047"></i>
+			</div>
+
+			<div id="home" class="d-flex h-38px lh-38px text-secondary">
+				<i id="homeBtn" title="Home (Alt+H)" role="button" class="fas fa-home lh-inherit fs-24px user-select-none c-394047 pl-5px pr-8px"></i>
+				<span id="closeTabs" role="button" class="material-icons lh-inherit fs-39px user-select-none c-394047 ml-auto">close</span>
+					<div id="closeTabsDIVCont" class="d-none">
+						<ul id="closeTabsULCont" class="list-group list-group-flush fw-bold">
+							<a id="closeTabsCurrent" role="button" class="list-group-item list-group-item-action">Close Current</a>
+							<a id="closeTabsOthers" role="button" class="list-group-item list-group-item-action">Close Others except Main</a>
+							<a id="closeTabsAll" role="button" class="list-group-item list-group-item-action">Close All except Main</a>
+							<a id="closeTabsCancel" role="button" class="list-group-item list-group-item-action">Cancel</a>
+						</ul>
+					</div>
+			</div>
+
+			<div id="quickFiltersCont" class="overflow-y-auto">
+				<div class="d-flex flex-column gap-4px">
+					<div class="card bg-light shadow-sm"> <!--TABS CARD-->
+						<div class="card-body qf-card-body">
+							<div class="card-title"><i class="far fa-window-maximize fs-17px pl-1px"></i><span class="fs-18px user-select-none pl-5px">Tabs</span></div>
+							<button id="tabsAllBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="t">All</button>
+						</div>
+						<span id="selectionElement" class="material-icons position-absolute top-0 end-0 fs-24px user-select-none c-394047 pt-1px pl-6px pr-6px" style="border-bottom: 1px dotted rgba(0, 0, 0, 0.4); border-left: 1px dotted rgba(0, 0, 0, 0.4);" role="button">more_horiz</span>
+					</div>
+					
+					<div class="card bg-light shadow-sm"> <!--CLOSED TABS CARD-->
+						<div class="card-body qf-card-body">
+							<div class="card-title"><i class="far fa-window-close fs-18px pl-1px"></i><span class="fs-18px user-select-none pl-4px">Closed Tabs</span></div>
+							<button id="cloTabsAllBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="tc">All</button>
+						</div>
+					</div>
+
+					<div class="card bg-light shadow-sm"> <!--HISTORY CARD-->
+						<div class="card-body qf-card-body">
+							<div class="card-title"><i class="fas fa-history fs-17px pl-2px"></i><span class="fs-18px user-select-none pl-4px">History</span></div>
+							<div class="d-flex flex-column gap-4px">
+								<button id="histTodayBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="h opened:today">Today</button>
+								<button id="histYesterdayBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="h opened:yesterday">Yesterday</button>
+								<button id="hist7daysBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="h opened:7days">Last 7 days</button>
+								<button id="histMonthBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="h opened:month">This month</button>
+								<button id="histAllBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="h">All</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="card bg-light shadow-sm"> <!--CLIPBOARD CARD-->
+						<div class="card-body qf-card-body">
+							<div class="card-title"><i class="fas fa-clipboard-list fs-18px pl-4px"></i><span class="fs-18px user-select-none pl-6px">Clipboard</span></div>
+							<button id="clipAllBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="c">All</button>
+						</div>
+					</div>
+
+					<div class="card bg-light shadow-sm"> <!--BOOKMARKS CARD-->
+						<div class="card-body qf-card-body">
+							<div id="devEle" class="card-title"><i class="far fa-star fs-17px pl-1px"></i><span class="fs-18px user-select-none pl-3px">Bookmarks</span></div>
+							<div class="d-flex flex-column gap-4px">
+								<button id="bmLast50AddBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="b added:last50">Last 50 added</button>
+								<button id="bmAllBtn" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn" value="b">All</button>
+								<button id="foldersTop" type="button" class="btn btn-sm btn-outline-dark w-100 qf-btn notSearchesBtnsHand">Folder Manager</button>
+							</div>	
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ul id="tabsNavCont" class="nav nav-pills ml-8px"  role="tablist">
+				<li class="nav-item" role="presentation">
+					<button class="nav-link" id="pills-main-tab" data-bs-toggle="pill" data-bs-target="#pills-main" type="button" role="tab" aria-controls="pills-main" aria-selected="false">HOME</button>
+				</li>
+				
+				<li class="nav-item d-none" role="presentation">
+					<button class="nav-link " id="pills-query-manager-tab" data-bs-toggle="pill" data-bs-target="#pills-query-manager" type="button" role="tab" aria-controls="pills-query-manager" aria-selected="false">QUERY MANAGER</button>
+				</li>
+				
+				<li class="nav-item d-none" role="presentation">
+					<button class="nav-link " id="pills-bookmark-manager-tab" data-bs-toggle="pill" data-bs-target="#pills-bookmark-manager" type="button" role="tab" aria-controls="pills-bookmark-manager" aria-selected="false">BOOKMARK MANAGER</button>
+				</li>
+				
+				<li class="nav-item d-none" role="presentation">
+					<button class="nav-link " id="pills-command-manager-tab" data-bs-toggle="pill" data-bs-target="#pills-command-manager" type="button" role="tab" aria-controls="pills-command-manager" aria-selected="false">COMMAND MANAGER</button>
+				</li>
+			</ul>
+
+			<div id="tabsViewCont" class="tab-content overflow-y-auto">
+				<div class="tab-pane fade h-100" id="pills-main" role="tabpanel" aria-labelledby="pills-main-tab">
+					<div id="myGrid" class="ag-theme-fresh h-100"></div>
+				</div>
+				
+				<div class="tab-pane fade h-100" id="pills-query-manager" role="tabpanel" aria-labelledby="pills-query-manager-tab">
+					<div id="queryManagerTab" class="d-flex flex-column h-100">
+						<ul id="queryManagerTabsNavCont" class="nav nav-pills d-flex gap-13px ml-8px" role="tablist">
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link"  id="queryBuilder-tab" data-bs-toggle="pill" data-bs-target="#queryBuilder" type="button" role="tab" aria-controls="queryBuilder" aria-selected="false">Query Builder</a>
+							</li>
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link" id="savedQueries-tab" data-bs-toggle="pill" data-bs-target="#savedQueries" type="button" role="tab" aria-controls="savedQueries" aria-selected="false">Saved Queries</a>
+							</li>
+						</ul>
+
+						<div id="queryManagerTabsViewCont" class="tab-content flex-grow-1">
+							<div class="tab-pane fade h-100" id="queryBuilder" role="tabpanel" aria-labelledby="queryBuilder-tab">
+								<div id="queryBuilderGUI" class="d-flex flex-column gap-4px h-100">
+									<div class="card bg-gradient" style="background-color: rgba(225, 235, 242, 1); border: solid 1px darkgrey;">
+										<div class="card-body">
+											<p class="card-text">Query Builder feature coming soon... Please refer to tutorial in iframe below on how to construct query manually for the time being.</p>
+											<div class="d-flex gap-8px">
+												<button id="resetIframe" type="button" class="btn btn-secondary btn-sm">Reset Iframe</button>
+												<button id="normQueryBtn" type="button" class="btn btn-secondary btn-sm">Normalize Query</button>
+												<button id="expandCollapseSearchBox" type="button" class="btn btn-secondary btn-sm">In/Decrease Search Box Width</button>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane fade h-100" id="savedQueries" role="tabpanel" aria-labelledby="savedQueries-tab">	
+								<div id="myQueryManager" class="ag-theme-fresh h-100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<div class="tab-pane fade h-100" id="pills-bookmark-manager" role="tabpanel" aria-labelledby="pills-bookmark-manager-tab">
+					<div id="bookmarkManagerTab" class="d-flex flex-column h-100">
+						<ul id="bookmarkManagerTabsNavCont" class="nav nav-pills d-flex gap-13px ml-8px" role="tablist">
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link"  id="folderManager-tab" data-bs-toggle="pill" data-bs-target="#folderManager" type="button" role="tab" aria-controls="folderManager" aria-selected="false">Folders</a>
+							</li>
+						</ul>
+						<div id="bookmarkManagerTabsViewCont" class="tab-content flex-grow-1 overflow-y-auto">
+							<div class="tab-pane fade h-100" id="folderManager" role="tabpanel" aria-labelledby="folderManager-tab">
+								<div id="folderManagerGUI" class="card folder-manager-width h-100" style="border: solid 1px darkgrey;">
+									<div class="d-flex h-100">
+										<div id="folderManagerTree" class="flex-grow-1 h-100 lh-24px fs-17px overflow-y-scroll"></div>
+										<div class="d-flex flex-column gap-8px h-100 text-truncate overflow-y-auto" style="padding: 11.2px 12.8px 11.2px 12.8px;">
+											<input id="folderManagerTreeSearchInput" type="text" class="form-control form-control-sm" role="presentation" autocomplete="off" placeholder="Search Folders...">
+											<button id="folderManagerTreeCollapseAllBtn" type="button" class="btn btn-secondary btn-sm mt-15px">Collapse All Folders</button>
+											<button id="folderManagerTreeExpandAllBtn" type="button" class="btn btn-secondary btn-sm">Expand All Folders</button>
+											<button id="folderManagerTargetBtn" type="button" class="btn btn-primary btn-sm mt-15px" data-keyword="mf">Move to Target Folder</button>
+											<div id="folderManagerMoveWithinFolderCont" class="dropdown fs-14px">
+												<button id="folderManagerMoveWithinFolderBtn" type="button" class="btn btn-primary btn-sm dropdown-toggle w-100" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Move within Folder</button>
+												<ul class="dropdown-menu dropdown-menu-sm w-100" aria-labelledby="dropdownMenuButton1">
+													<li><a id="folderManagerTopDrop" class="dropdown-item dropdown-item-sm" href="#" data-keyword="top">Move to Top</a></li>
+													<li><a id="folderManagerBottomDrop" class="dropdown-item dropdown-item-sm" href="#" data-keyword="bot">Move to Bottom</a></li>
+													<li><a id="folderManagerCancelDrop" class="dropdown-item dropdown-item-sm" href="#">Cancel</a></li>
+												</ul>
+											</div>
+											<button id="folderManagerRenameFolderBtn" type="button" class="btn btn-primary btn-sm mt-15px" data-keyword="rf">Rename Folder</button>
+											<button id="folderManagerDeleteFolderBtn" type="button" class="btn btn-primary btn-sm" data-keyword="del">Delete Folder</button>
+											<button id="folderManagerCreateNewFolderBtn" type="button" class="btn btn-primary btn-sm" data-keyword="cnf">Create New Folder</button>
+											<button id="folderManagerRefreshFolderTreeBtn" type="button" class="btn btn-secondary btn-sm mt-15px">Refresh Folder Tree</button>
+											<button id="folderManagerInDecreaseTreePanelWidthBtn" type="button" class="btn btn-secondary btn-sm">In/Decrease Tree Panel Width</button>
+											<button id="folderManagerHelpBtn" type="button" class="btn btn-secondary btn-sm">Help</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="tab-pane fade h-100" id="pills-command-manager" role="tabpanel" aria-labelledby="pills-command-manager-tab">
+					<div id="commandManagerTab" class="d-flex flex-column h-100">
+						<ul id="commandManagerTabsNavCont" class="nav nav-pills d-flex gap-13px ml-8px" role="tablist">
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link" id="savedCommands-tab" data-bs-toggle="pill" data-bs-target="#savedCommands" type="button" role="tab" aria-controls="savedCommands" aria-selected="false">Saved Commands</a>
+							</li>
+						</ul>
+						
+						<div id="commandManagerTabsViewCont" class="tab-content flex-grow-1">
+							<div class="tab-pane fade h-100" id="savedCommands" role="tabpanel" aria-labelledby="savedCommands-tab">
+								<div id="myCommandManager" class="ag-theme-fresh h-100"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="commandsCont" class="text-truncate overflow-visible">
+				<div id="commandButtonsRemovedCont" class="d-none">
+					<span class="mr-15px">Command buttons were removed. Right click anywhere inside grid and select command from context menu instead.</span>
+					<span>
+						<button id="dismissForeverBtn">Dismiss permanently</button>
+					</span>
+				</div>
+
+				<div id="commandBoxContainer" class="d-none d-flex gap-8px">
+					<select id="cbpcs" class="form-select form-select-sm bg-light" role="button" style="min-width: 35px; max-width: 185px;">
+						<option value="pasteCommand">Paste Command</option>
+					</select>
+					<div id="commandLineCont" class="input-group input-group-sm">
+						<input type="text" id="command" class="form-control" data-command data-search data-time data-val role="presentation" autocomplete="off">
+						<i id="goDown" title="Execute Command (Enter)" role="button" class="fas fa-play input-group-text fs-16px c-394047 pt-7px pl-9px"></i>
+						<i id="saved2" title="Saved Commands (Alt+W)" role="button" class="fas fa-save input-group-text fs-18px c-394047 pt-6px pl-8px"></i>
+					</div>
+				</div>
+			</div>
+			
+			<div id="indicator" role="button" class="text-truncate user-select-none ml-4px" data-tot></div>
+				<div id="indicatorDIVCont" class="d-none">
+						<ul id="indicatorULCont" class="list-group list-group-flush fw-bold">
+							<a id="selAll" role="button" class="list-group-item list-group-item-action">Select All</a>
+							<a id="unselAll" role="button" class="list-group-item list-group-item-action">Unselect All</a>
+							<a id="invSel" role="button" class="list-group-item list-group-item-action">Invert Selection</a>
+							<a id="fromCurRowToTop" role="button" class="list-group-item list-group-item-action">From Row to Top</a>
+							<a id="fromCurRowToBottom" role="button" class="list-group-item list-group-item-action">From Row to Bottom</a>
+							<a id="indicatorCancel" role="button" class="list-group-item list-group-item-action">Cancel</a>
+						</ul>
+				</div>
+
+			<div id="statusCont" class="d-flex gap-5px text-truncate">
+				<div id="status" class="flex-grow-1 text-truncate"></div>
+				<div id="statusDefaultSortingCont" role="button" class="d-flex align-items-center gap-3px user-select-none mr-7px" title="Reset to Default Sorting">
+					<i class="fas fa-sort fa-lg c-394047"></i>
+					<div id="statusDefaultSorting" class="mb-2px"></div>	
+				</div>
+				<div class="d-flex align-items-center gap-6px mr-4px" title="Show/Hide Command Line">
+					<input class="form-check-input mt-0px" type="checkbox" id="commandCheckbox" role="button">
+					<label class="form-check-label mb-1px" for="commandCheckbox" role="button"><i class="fas fa-terminal c-394047"></i></label>
+				</div>
+			</div>
+		</div>
+		
+		<!--MODAL ALERT-->
+		<div class="modal fade" id="modalAlert" tabindex="-1" aria-labelledby="modalAlertLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div id="modalAlertAlert" class="alert alert-dismissible mb-0">
+						<h5 id="modalAlertLabel"></h5>
+						<button id="modalAlertCloseBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<hr class="message-inner-separator">
+						<div id="modalAlertMsg" class="mb-1px"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--MODAL CONFIRMATION-->
+		<div class="modal fade" id="modalConfirmation" tabindex="-1" aria-labelledby="modalConfirmationLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalConfirmationLabel"></h5>
+						<button id="modalConfirmationCloseBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div id="modalConfirmationMsg"></div>
+					</div>
+					<div class="modal-footer">
+						<button id="modalConfirmationYesBtn" type="button" class="btn btn-primary" data-bs-dismiss="modal" style="width: 75px;">Yes</button>
+						<button id="modalConfirmationNoBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 75px;">No</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--MODAL PROMPT-->
+		<div class="modal fade" id="modalPrompt" tabindex="-1" aria-labelledby="modalPromptLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalPromptLabel"></h5>
+						<button id="modalPromptCloseBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body d-flex flex-column gap-8px">
+						<div id="modalPromptMsg"></div>
+						<input id="modalPromptInput" type="text" class="form-control" role="presentation" autocomplete="off">
+					</div>
+					<div class="modal-footer">
+						<button id="modalPromptOKBtn" type="button" class="btn btn-primary" style="width: 75px;">OK</button>
+						<button id="modalPromptCancelBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="width: 75px;">Cancel</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--MODAL BOOKMARK/MOVE-->
+		<div class="modal fade" id="modalBookmark" tabindex="-1" aria-labelledby="modalBookmarkLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered">
+				<div class="modal-content h-100">
+					<div class="modal-header">
+						<h5 class="modal-title" id="modalBookmarkLabel"></h5>
+						<button id="modalBookmarkCloseBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body d-flex" style="padding: 0 0 0 12.8px;">
+						<div id="modalBookmarkTree" class="flex-grow-1 overflow-y-scroll fs-17px lh-24px"></div>
+						<div class="d-flex flex-column gap-8px text-truncate overflow-y-auto" style="padding: 11.2px 12.8px 11.2px 12.8px;">
+							<input id="modalBookmarkTreeSearchInput" type="text" class="form-control form-control-sm" role="presentation" autocomplete="off" placeholder="Search Folders...">
+							<button id="modalBookmarkTreeCollapseAllBtn" type="button" class="btn btn-secondary btn-sm mt-15px">Collapse All Folders</button>
+							<button id="modalBookmarkTreeExpandAllBtn" type="button" class="btn btn-secondary btn-sm">Expand All Folders</button>
+							<button id="modalBookmarkTargetBtn" type="button" class="btn btn-primary btn-sm mt-15px"></button>
+							<button id="modalBookmarkNewBtn" type="button" class="btn btn-primary btn-sm"></button>
+							<button id="modalBookmarkRefreshFolderTreeBtn" type="button" class="btn btn-secondary btn-sm mt-15px">Refresh Folder Tree</button>
+							<button id="modalBookmarkInDecreaseTreePanelWidthBtn" type="button" class="btn btn-secondary btn-sm">In/Decrease Tree Panel Width</button>
+							<button id="modalBookmarkHelpBtn" type="button" class="btn btn-secondary btn-sm">Help</button>
+						</div>
+					</div>
+					<div class="modal-footer flex-nowrap justify-content-start">
+						<div id="modalBookmarkFullPath" class="text-truncate"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
