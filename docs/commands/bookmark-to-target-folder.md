@@ -6,11 +6,13 @@ GUI available: Yes
 
 Creates bookmarks for the selected items in a chosen target folder.
 
+## GUI
+
 When using the GUI, select **Bookmark to Target Folder** from the context menu, choose the target folder, and then click **Bookmark to Target Folder**.
 
 ![Bookmark to Target Folder dialog](images/bookmark_to_target_folder.png)
 
-## Syntax
+## CLI
 
 `bmf <target-folder>`
 
