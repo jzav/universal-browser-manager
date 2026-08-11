@@ -8,7 +8,7 @@ Creates bookmarks for the selected items in a chosen target folder.
 
 When using the GUI, select **Bookmark to Target Folder** from the context menu, choose the target folder, and then click **Bookmark to Target Folder**.
 
-![Bookmark to Target Folder dialog](images/bookmark-to-target-folder.png)
+![Bookmark to Target Folder dialog](images/bookmark_to_target_folder.png)
 
 ## Syntax
 

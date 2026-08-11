@@ -8,7 +8,7 @@ Creates bookmarks for the selected items in a new folder under a chosen parent f
 
 When using the GUI, select [Bookmark to Target Folder](bookmark-to-target-folder.md) from the context menu, choose the parent folder, and then click **Bookmark to New Folder**. 
 
-<img src="images/bookmark-to-new-folder.png" alt="Bookmark to New Folder dialog">
+![Bookmark to New Folder dialog](images/bookmark_to_new_folder.png)
 
 Enter the name of the new folder in the dialog that appears.
 

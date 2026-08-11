@@ -8,7 +8,7 @@ Creates a new folder under a chosen parent folder and moves the selected bookmar
 
 When using the GUI, select [Move to Target Folder](move-to-target-folder.md) from the context menu, choose the parent folder, and then click **Move to New Folder**.
 
-![Move to New Folder dialog](images/move-to-new-folder.png)
+![Move to New Folder dialog](images/move_to_new_folder.png)
 
 Enter the name of the new folder in the dialog that appears.
 

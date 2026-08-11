@@ -8,7 +8,7 @@ Moves the selected bookmarks to a chosen target folder.
 
 When using the GUI, select **Move to Target Folder** from the context menu, choose the target folder, and then click **Move to Target Folder**.
 
-![Move to Target Folder dialog](images/move-to-target-folder.png)
+![Move to Target Folder dialog](images/move_to_target_folder.png)
 
 ## Syntax
 
