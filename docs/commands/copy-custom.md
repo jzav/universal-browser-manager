@@ -1,8 +1,8 @@
 # Copy Custom
 
-Keyword: `cc`··
-Requires parameters: Yes··
-GUI available: No··
+Keyword: `cc`  
+Requires parameters: Yes  
+GUI available: No  
 
 Specify keyword (`cc`) and single or multiple column names surrounded by percentage signs (e.g. `%url%`). Then type (optionally) any characters before, between or after surrounded column names. And execute command to replace surrounded names by respective values of selected items and copy result to clipboard.
 

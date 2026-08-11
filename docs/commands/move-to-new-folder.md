@@ -1,8 +1,8 @@
 # Move to New Folder
 
-Keyword: `mn`··
-Requires parameters: Yes··
-GUI available: Yes··
+Keyword: `mn`  
+Requires parameters: Yes  
+GUI available: Yes  
 
 Creates a new folder under a chosen parent folder and moves the selected bookmarks into it.
 

@@ -1,8 +1,8 @@
 # Bookmark to New Folder
 
-Keyword: `bmn`··
-Requires parameters: Yes··
-GUI available: Yes··
+Keyword: `bmn`  
+Requires parameters: Yes  
+GUI available: Yes  
 
 Creates bookmarks for the selected items in a new folder under a chosen parent folder.
 

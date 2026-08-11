@@ -1,8 +1,8 @@
 # Move to Target Folder
 
-Keyword: `mf`··
-Requires parameters: Yes··
-GUI available: Yes··
+Keyword: `mf`  
+Requires parameters: Yes  
+GUI available: Yes  
 
 Moves the selected bookmarks to a chosen target folder.
 
