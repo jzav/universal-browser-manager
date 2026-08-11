@@ -1,8 +1,8 @@
 # Bookmark to Target Folder
 
-Keyword: `bmf`
-Requires parameters: Yes
-GUI available: Yes
+Keyword: `bmf`··
+Requires parameters: Yes··
+GUI available: Yes··
 
 Creates bookmarks for the selected items in a chosen target folder.
 
