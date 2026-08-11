@@ -9,73 +9,73 @@ The available commands are listed below by search mode.
 ## Tabs
 
 - Move
-  - [Move to Start](commands/move-to-start.md) (`mt`)
-  - [Move to End](commands/move-to-end.md) (`ml`)
-  - [Move to New Window](commands/move-to-new-window.md) (`mw`)
-- [Close](commands/close.md) (`cl`)
+  - [Move to Start](commands/move-to-start.md)
+  - [Move to End](commands/move-to-end.md)
+  - [Move to New Window](commands/move-to-new-window.md)
+- [Close](commands/close.md)
 - Reload
-  - [Reload](commands/reload.md) (`rel`)
-  - [Reload Bypassing the Cache](commands/reload-bypassing-the-cache.md) (`rec`)
+  - [Reload](commands/reload.md)
+  - [Reload Bypassing the Cache](commands/reload-bypassing-the-cache.md)
 - Copy
-  - [Copy URLs](commands/copy-urls.md) (`cu`)
-  - [Copy Custom](commands/copy-custom.md) (`cc`)
-- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md) (`bmf`)
-- [Bookmark to New Folder](commands/bookmark-to-new-folder.md) (`bmn`)
-- [Go to Bookmarks](commands/go-to-bookmarks.md) (`gbm`)
-- [Locate Folder in Tree](commands/locate-folder-in-tree.md) (`lft`)
+  - [Copy URLs](commands/copy-urls.md)
+  - [Copy Custom](commands/copy-custom.md)
+- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md)
+- [Bookmark to New Folder](commands/bookmark-to-new-folder.md)
+- [Go to Bookmarks](commands/go-to-bookmarks.md)
+- [Locate Folder in Tree](commands/locate-folder-in-tree.md)
 
 ## Closed Tabs
 
 - Open
-  - [Open at the Start](commands/open-at-the-start.md) (`ot`)
-  - [Open at the End](commands/open-at-the-end.md) (`ol`)
-  - [Open in New Window](commands/open-in-new-window.md) (`ow`)
-- [Restore](commands/restore.md) (`res`)
+  - [Open at the Start](commands/open-at-the-start.md)
+  - [Open at the End](commands/open-at-the-end.md)
+  - [Open in New Window](commands/open-in-new-window.md)
+- [Restore](commands/restore.md)
 - Copy
-  - [Copy URLs](commands/copy-urls.md) (`cu`)
-  - [Copy Custom](commands/copy-custom.md) (`cc`)
-- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md) (`bmf`)
-- [Bookmark to New Folder](commands/bookmark-to-new-folder.md) (`bmn`)
+  - [Copy URLs](commands/copy-urls.md)
+  - [Copy Custom](commands/copy-custom.md)
+- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md)
+- [Bookmark to New Folder](commands/bookmark-to-new-folder.md)
 
 ## History
 
 - Open
-  - [Open at the Start](commands/open-at-the-start.md) (`ot`)
-  - [Open at the End](commands/open-at-the-end.md) (`ol`)
-  - [Open in New Window](commands/open-in-new-window.md) (`ow`)
-- [Delete](commands/delete.md) (`del`)
+  - [Open at the Start](commands/open-at-the-start.md)
+  - [Open at the End](commands/open-at-the-end.md)
+  - [Open in New Window](commands/open-in-new-window.md)
+- [Delete](commands/delete.md)
 - Copy
-  - [Copy URLs](commands/copy-urls.md) (`cu`)
-  - [Copy Custom](commands/copy-custom.md) (`cc`)
-- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md) (`bmf`)
-- [Bookmark to New Folder](commands/bookmark-to-new-folder.md) (`bmn`)
+  - [Copy URLs](commands/copy-urls.md)
+  - [Copy Custom](commands/copy-custom.md)
+- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md)
+- [Bookmark to New Folder](commands/bookmark-to-new-folder.md)
 
 ## Clipboard
 
 - Open
-  - [Open at the Start](commands/open-at-the-start.md) (`ot`)
-  - [Open at the End](commands/open-at-the-end.md) (`ol`)
-  - [Open in New Window](commands/open-in-new-window.md) (`ow`)
-- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md) (`bmf`)
-- [Bookmark to New Folder](commands/bookmark-to-new-folder.md) (`bmn`)
+  - [Open at the Start](commands/open-at-the-start.md)
+  - [Open at the End](commands/open-at-the-end.md)
+  - [Open in New Window](commands/open-in-new-window.md)
+- [Bookmark to Target Folder](commands/bookmark-to-target-folder.md)
+- [Bookmark to New Folder](commands/bookmark-to-new-folder.md)
 
 ## Bookmarks
 
 - Open
-  - [Open at the Start](commands/open-at-the-start.md) (`ot`)
-  - [Open at the End](commands/open-at-the-end.md) (`ol`)
-  - [Open in New Window](commands/open-in-new-window.md) (`ow`)
-- [Move to Target Folder](commands/move-to-target-folder.md) (`mf`)
-- [Move to New Folder](commands/move-to-new-folder.md) (`mn`)
+  - [Open at the Start](commands/open-at-the-start.md)
+  - [Open at the End](commands/open-at-the-end.md)
+  - [Open in New Window](commands/open-in-new-window.md)
+- [Move to Target Folder](commands/move-to-target-folder.md)
+- [Move to New Folder](commands/move-to-new-folder.md)
 - Move within Folder
-  - [Move to Top](commands/move-to-top.md) (`top`)
-  - [Move to Bottom](commands/move-to-bottom.md) (`bot`)
-- [Go to Parent Folders](commands/go-to-parent-folders.md) (`gpf`)
-- [Locate Folder in Tree](commands/locate-folder-in-tree.md) (`lft`)
-- [Delete](commands/delete.md) (`del`)
+  - [Move to Top](commands/move-to-top.md)
+  - [Move to Bottom](commands/move-to-bottom.md)
+- [Go to Parent Folders](commands/go-to-parent-folders.md)
+- [Locate Folder in Tree](commands/locate-folder-in-tree.md)
+- [Delete](commands/delete.md)
 - Copy
-  - [Copy URLs](commands/copy-urls.md) (`cu`)
-  - [Copy Custom](commands/copy-custom.md) (`cc`)
+  - [Copy URLs](commands/copy-urls.md)
+  - [Copy Custom](commands/copy-custom.md)
 - Edit Cell Value
   - Edit Cell Value (F4)
   - Commit Changes (Enter)
