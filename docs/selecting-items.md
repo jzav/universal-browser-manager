@@ -40,7 +40,9 @@ Previous selection (elsewhere in grid) is not lost.
 
 Click checkbox on the left of header row to un/select all items.
 
-Press Ctrl + A to select all items. Selected items are highlighted in light blue.
+Press Ctrl + A to select all items.
+
+Selected items are highlighted in light blue.
 
 Press Ctrl + U to unselect all items.
 
