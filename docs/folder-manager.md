@@ -14,7 +14,7 @@ Redesigned search as you type feature is available. Note: Expand/Collapse All Fo
 
 Click respective button to execute Move, Rename, Delete or Create New Folder commands on selected folder.
 
-Very similar GUI is used for bookmarking and moving already bookmarked items. Note: some commands are not available in this context.
+A very similar GUI is used for both [Bookmark to Target Folder](commands/bookmark-to-target-folder.md) / [Bookmark to New Folder](commands/bookmark-to-new-folder.md) and [Move to Target Folder](commands/move-to-target-folder.md) / [Move to New Folder](commands/move-to-new-folder.md) commands. Note: some commands are not available in this context.
 
 Quickly locate folder in tree using Locate Folder in Tree command (tabs and bookmarks search modes).
 
