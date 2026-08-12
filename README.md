@@ -1,6 +1,10 @@
 # Universal Browser Manager
 
-Universal manager for Firefox. Manage your tabs, bookmarks, history and clipboard using powerful filtering and sorting capability. Easily select multiple items and handle them at once.
+Universal browser data manager for Firefox. Manage tabs, bookmarks, history and clipboard using powerful filtering, sorting and search capabilities. Then select multiple items and perform batch operations with ease.
+
+[https://addons.mozilla.org/en-US/firefox/addon/universal-browser-manager](https://addons.mozilla.org/en-US/firefox/addon/universal-browser-manager)
+
+![Readme img](docs/commands/images/readme.png))
 
 ## Documentation
 
