@@ -4,7 +4,7 @@ Universal browser data manager for Firefox. Manage tabs, bookmarks, history and 
 
 [https://addons.mozilla.org/en-US/firefox/addon/universal-browser-manager](https://addons.mozilla.org/en-US/firefox/addon/universal-browser-manager)
 
-![Readme img](docs/commands/images/readme.png))
+![Readme img](docs/commands/images/readme.png)
 
 ## Documentation
 
