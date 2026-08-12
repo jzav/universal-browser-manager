@@ -26,6 +26,8 @@ Or type nothing else but query keyword in search box (you do not need to start Q
 
 Select single saved query and execute Save command from context menu to replace it with current search box query. All other information is preserved (keyword etc.).
 
+Focus any editable column cell and press F4 or Alt + E to edit its value. Then press Enter to commit changes or Esc to discard them. All these commands are also available via context menu.
+
 ## Deleting saved queries
 
 Select any number of saved queries and execute Delete command from context menu.

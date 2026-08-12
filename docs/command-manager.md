@@ -26,6 +26,8 @@ Or type nothing else but command keyword in command box (you do not need to star
 
 Select single saved command and execute Save command from context menu to replace it with current command box content. All other information is preserved (keyword etc.).
 
+Focus any editable column cell and press F4 or Alt + E to edit its value. Then press Enter to commit changes or Esc to discard them. All these commands are also available via context menu.
+
 ## Deleting saved commands
 
 Select any number of saved commands and execute Delete command from context menu.

@@ -2,7 +2,7 @@
 
 Single-click anywhere in row to focus item. The focused item's data is shown in bold. Note: Single-clicking without holding Ctrl or Shift does NOT select item (except for clicking favicon). It does not deselect items elsewhere in grid either.
 
-If you want to access column or cell based shortcuts and functionality, click row in area where desired column data is located. When cell is focused this way, respective column header text is made bold. You can e.g. press Alt + A to sort column ascending then. See [Shortcuts](shortcuts.md) and [Search](search.md#column-or-cell-based-shortcuts-and-functionality) for more examples. Note: not applicable in Folder Manager.
+If you want to access column or cell based shortcuts and functionality, click row in area where desired column data is located. When a cell is focused this way, the respective column header is shown in bold. You can e.g. press Alt + A to sort column ascending then. See [Shortcuts](shortcuts.md) and [Search](search.md#column-or-cell-based-shortcuts-and-functionality) for more examples. Note: not applicable in Folder Manager.
 
 Un/selecting item(s) update [x of y selected indicator](https://i.imgur.com/ej9AiSv.png) in bottom left corner. X represents selected items count. Y represents total count (count of all items that search returned).
 
