@@ -16,3 +16,11 @@ Universal browser data manager for Firefox. Manage tabs, bookmarks, history and 
 - [Shortcuts](docs/shortcuts.md)
 - [Query Manager](docs/query-manager.md)
 - [Command Manager](docs/command-manager.md)
+
+## Acknowledgements
+
+Since version 13.1, ChatGPT assists with the design, development, and documentation of Universal Browser Manager.
+
+## License
+
+Released under the MIT License. See [LICENSE](LICENSE).
