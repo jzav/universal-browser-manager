@@ -19,7 +19,11 @@ Universal browser data manager for Firefox. Manage tabs, bookmarks, history and 
 
 ## Acknowledgements
 
-Since version 13.1, ChatGPT assists with the design, development, and documentation of Universal Browser Manager.
+Since version 13.1, the project uses 
+[Snapshot Toolset](https://github.com/jzav/snapshot-toolset) to provide 
+anchored project snapshots for ChatGPT-assisted patch generation and application. 
+ChatGPT also assists with design and documentation. Contributions, bug reports, and
+security notes are welcome.
 
 ## License
 
