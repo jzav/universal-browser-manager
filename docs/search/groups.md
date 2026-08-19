@@ -12,6 +12,6 @@
 
 `b url:{firefox add-on "universal browser manager"}` shows bookmarks whose URL contains "firefox" OR "add-on" OR multiple-word phrase "universal browser manager".
 
-Note: AND and OR groups cannot currently be nested. For example, `(url:(github issues) {folder:work accessed:yesterday})` is not supported.
+Note: AND and OR groups cannot currently be nested. For example, `t (url:(github issues) {folder:work accessed:yesterday})` is not supported.
 
 See [Search](../search.md) for the complete search syntax reference.
